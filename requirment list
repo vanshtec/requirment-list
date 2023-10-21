@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Data Input Form</title>
+    <style>
+        /* Basic CSS for styling the form */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>requirment list</h2>
+        <form id="userDataForm">
+            <label for="name">product:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your product" required>
+
+            <label for="email">link of matrial:</label>
+            <input type="text" id="email" name="email" placeholder="Enter link" required>
+
+            <button type="button" id="submitBtn">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        // JavaScript for handling form submission
+        document.getElementById("submitBtn").addEventListener("click", function() {
+            // Get user input
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+
+            // You can perform further actions with the data, such as sending it to a server or displaying it on the page
+            alert(`Name: ${name}\nEmail: ${email}`);
+        });
+    </script>
+</body>
+</html>
